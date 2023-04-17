@@ -5,7 +5,7 @@
       <param name="video_device" value="/dev/video0" />
       <param name="image_width" value="1920" />
       <param name="image_height" value="1080" />
-      <param name="pixel_format" value="v4l2" />
+      <param name="pixel_format" value="yuyv" />
       <param name="camera_frame_id" value="usb_cam1" />
       <param name="io_method" value="mmap" />
     </node>
@@ -17,7 +17,7 @@
       <param name="video_device" value="/dev/video1" />
       <param name="image_width" value="1920" />
       <param name="image_height" value="1080" />
-      <param name="pixel_format" value="v4l2" />
+      <param name="pixel_format" value="yuyv" />
       <param name="camera_frame_id" value="usb_cam2" />
       <param name="io_method" value="mmap" />
     </node>
@@ -25,7 +25,7 @@
 
   <!-- Web video server node -->
   <node name="web_video_server" pkg="web_video_server" type="web_video_server">
-    <param name="address" value="192.168.1.131" />
+    <param name="address" value="192.168.1.131v" />
     <param name="port" value="8080" />
   </node>
 
