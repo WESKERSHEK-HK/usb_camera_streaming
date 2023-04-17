@@ -5,6 +5,7 @@
       <param name="video_device" value="/dev/video0" />
       <param name="image_width" value="1920" />
       <param name="image_height" value="1080" />
+	  <param name="framerate" value="30" />
       <param name="pixel_format" value="yuyv" />
       <param name="camera_frame_id" value="usb_cam1" />
       <param name="io_method" value="mmap" />
@@ -17,6 +18,7 @@
       <param name="video_device" value="/dev/video1" />
       <param name="image_width" value="1920" />
       <param name="image_height" value="1080" />
+	  <param name="framerate" value="30" />
       <param name="pixel_format" value="yuyv" />
       <param name="camera_frame_id" value="usb_cam2" />
       <param name="io_method" value="mmap" />
