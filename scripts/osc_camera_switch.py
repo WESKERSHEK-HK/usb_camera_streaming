@@ -15,7 +15,7 @@ def switch_cameras_handler(unused_addr, args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", default="192.168.1.131, help="The IP to listen on")
+    parser.add_argument("--ip", default="192.168.1.131", help="The IP to listen on")
     parser.add_argument("--port", type=int, default=20000, help="The port to listen on")
     parser.add_argument("--cam1", default="usb_cam1", help="The first camera node name")
     parser.add_argument("--cam2", default="usb_cam2", help="The second camera node name")
