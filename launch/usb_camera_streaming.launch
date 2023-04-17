@@ -25,7 +25,7 @@
 
   <!-- Web video server node -->
   <node name="web_video_server" pkg="web_video_server" type="web_video_server">
-    <param name="address" value="192.168.1.131v" />
+    <param name="address" value="192.168.1.131" />
     <param name="port" value="8080" />
   </node>
 
