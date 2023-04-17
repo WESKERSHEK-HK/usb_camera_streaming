@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import argparse
 from pythonosc import dispatcher
 from pythonosc import osc_server
