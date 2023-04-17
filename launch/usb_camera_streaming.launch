@@ -29,9 +29,4 @@
     <param name="port" value="8080" />
   </node>
 
-  <!-- OSC camera switch script -->
-  <node name="osc_camera_switch" pkg="usb_camera_streaming" type="osc_camera_switch.py" output="screen">
-    <param name="cam1" value="usb_cam1" />
-    <param name="cam2" value="usb_cam2" />
-  </node>
 </launch>
