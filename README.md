@@ -24,11 +24,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+  #ROS-Melodic
   This project aims to use rosbridge, websocket and web_video_server to streaming mulitple device camera in the same network.
 
 ### Requirments
 
-* Python3 Library
+* ROS Library
   ```sh
   sudo apt-get install ros-melodic-usb-cam ros-melodic-rosbridge-server ros-melodic-web-video-server
   ```
