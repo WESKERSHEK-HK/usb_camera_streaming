@@ -7,15 +7,9 @@
       <param name="image_height" value="1080" />
 	  <param name="framerate" value="30" />
       <param name="pixel_format" value="yuyv" />
-      <param name="camera_frame_id" value="usb_cam1" />
+      <param name="camera_frame_id" value="usb_cam2" />
       <param name="io_method" value="mmap" />
     </node>
   </group>
-
-  <!-- Web video server node -->
-  <node name="web_video_server" pkg="web_video_server" type="web_video_server">
-    <param name="address" value="192.168.50.200" />
-    <param name="port" value="8080" />
-  </node>
 
 </launch>
