@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Switcher</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var videoTopic1 = "/camera1/image_raw";
+            var videoTopic2 = "/camera2/image_raw";
+            var currentTopic = videoTopic1;
+            var videoUrl = "http://192.168.50.200:8080/stream?topic=" + currentTopic + "&type=ros_compressed";
+
+            $("#video-stream").attr("src", videoUrl);
+
+            var socket = io("http://192.168.50.200:10000");
+            socket.on("connect", function () {
+                console.log("Connected to OSC server.");
+            });
+
+            socket.on("osc", function (msg) {
+                if (msg.address === "/switch") {
+                    currentTopic = currentTopic === videoTopic1 ? videoTopic2 : videoTopic1;
+                    videoUrl = "http://192.168.50.200:8080/stream?topic=" + currentTopic + "&type=ros_compressed";
+                    $("#video-stream").attr("src", videoUrl);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <video id="video-stream" width="1920" height="1080" autoplay></video>
+</body>
+</html>
