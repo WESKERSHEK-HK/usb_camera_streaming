@@ -11,24 +11,5 @@
       <param name="io_method" value="mmap" />
     </node>
   </group>
-
-  <!-- USB camera 2 node -->
-  <group ns="usb_cam2">
-    <node name="usb_cam" pkg="usb_cam" type="usb_cam_node" output="screen">
-      <param name="video_device" value="/dev/video1" />
-      <param name="image_width" value="1920" />
-      <param name="image_height" value="1080" />
-	  <param name="framerate" value="30" />
-      <param name="pixel_format" value="yuyv" />
-      <param name="camera_frame_id" value="usb_cam2" />
-      <param name="io_method" value="mmap" />
-    </node>
-  </group>
-
-  <!-- Web video server node -->
-  <node name="web_video_server" pkg="web_video_server" type="web_video_server">
-    <param name="address" value="192.168.1.131" />
-    <param name="port" value="8080" />
-  </node>
-
+  
 </launch>
