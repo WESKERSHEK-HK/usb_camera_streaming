@@ -49,7 +49,7 @@
    roslaunch rosbridge_server rosbridge_websocket.launch
    rosrun web_video_server web_video_server
    ```
-4. Launch usb_cam in different device to publish video topic:
+4. Launch usb_cam in different device to publish video topic (make sure use different topic name!!):
    ```sh
    roslaunch usb_cam usb_cam-test.launch
    ```
